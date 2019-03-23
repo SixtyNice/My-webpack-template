@@ -29,6 +29,14 @@ module.exports = {
                 exclude: '/node_modules'
             },
             {
+                test: /\.pug$/,
+                loader: 'pug-loader',
+                options: {
+                    sourceMap: true,
+                    pretty:true 
+                }
+            },
+            {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
@@ -92,7 +100,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             hash: false,
-            template: `${PATHS.src}/index.html`,
+            template: `${PATHS.src}/index.pug`,
             filename: './index.html'
         }),
         new CopyWebpackPlugin([
