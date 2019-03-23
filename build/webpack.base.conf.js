@@ -100,7 +100,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             hash: false,
-            template: `${PATHS.src}/index.pug`,
+            template: `${PATHS.src}/pug/index.pug`,
             filename: './index.html'
         }),
         new CopyWebpackPlugin([
